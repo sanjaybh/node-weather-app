@@ -41,7 +41,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help.hbs', {
         title : "Help",
-        contactNo : "12-345-6765",
+        contactNo : "91-9891295811",
         name: 'Samarth Bhan'
     })
 })
