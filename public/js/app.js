@@ -3,7 +3,7 @@ const weatherForm = document.querySelector('form');
 const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2');
 
-const baseURL = "http://localhost:3000";
+const baseURL = "/";
 
 messageOne.textContent = '';
 messageTwo.textContent = '';
@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
 })
 
 function getWeatherData(location){
-    fetch(`${baseURL}/weather?address=${location}`).then((response)=>{
+    fetch(`/weather?address=${location}`).then((response)=>{
         response.json().then(({ error, location, country, region, forecast, temperature, feelslike})=>{
             if(error){
                 messageOne.textContent = error;
