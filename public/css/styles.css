@@ -75,3 +75,8 @@ img {
     top: 55px;
     left: -133px;
 }
+
+#messageJSON {
+    font-size: 9px;
+    color: rgba(167, 136, 136, 0.808);
+}

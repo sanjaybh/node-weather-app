@@ -11,6 +11,7 @@ const forecast = (geoAddress, callback) => {
         } else if(body.error){
             callback('Unable to find location. Try another search.', undefined);
         } else {
+            //console.log("Res -> "+JSON.stringify(body))
             callback(undefined, {
                 query : body.request.query,
                 language: body.request.language,
@@ -26,7 +27,7 @@ const forecast = (geoAddress, callback) => {
                 feelslike : body.current.feelslike,
                 weather_icons: body.current.weather_icons,
                 humidity: body.current.humidity,
-                //body: body,
+                body: body,
                 weatherDesc : body.current.weather_descriptions[0]
             });
         }

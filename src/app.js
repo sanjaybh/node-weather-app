@@ -56,7 +56,7 @@ app.get('/weather', (req, res) => {
         if(error) {
             return res.send({ error });
         }
-        forcast(`${longitude}, ${latitude}`, (error, { country, region, weatherDesc, temperature, feelslike} = {} ) =>{
+        forcast(`${longitude}, ${latitude}`, (error, { country, region, weatherDesc, temperature, feelslike, body} = {} ) =>{
             if(error){
                 return res.send({ error });
             }
@@ -71,7 +71,8 @@ app.get('/weather', (req, res) => {
                 country,
                 region,
                 temperature,
-                feelslike
+                feelslike,
+                body
             })
         })
     })     
